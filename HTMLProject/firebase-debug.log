@@ -1,0 +1,32 @@
+[debug] [2018-03-09T20:24:47.349Z] ----------------------------------------------------------------------
+[debug] [2018-03-09T20:24:47.351Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-09T20:24:47.351Z] CLI Version:   3.17.4
+[debug] [2018-03-09T20:24:47.352Z] Platform:      darwin
+[debug] [2018-03-09T20:24:47.352Z] Node Version:  v8.9.4
+[debug] [2018-03-09T20:24:47.352Z] Time:          Fri Mar 09 2018 12:24:47 GMT-0800 (PST)
+[debug] [2018-03-09T20:24:47.352Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-09T20:24:47.363Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-09T20:24:47.364Z] > authorizing via signed-in user
+[debug] [2018-03-09T20:24:47.366Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/html-project-eea70  
+  
+ Fri Mar 09 2018 12:24:47 GMT-0800 (PST)
+[debug] [2018-03-09T20:24:47.846Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-09T20:24:47.847Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/html-project-eea70/tokens  
+  
+ Fri Mar 09 2018 12:24:47 GMT-0800 (PST)
+[debug] [2018-03-09T20:24:48.233Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/hollyholden/Desktop/HTMLProject'...
+[info] 
+[debug] [2018-03-09T20:24:48.236Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/html-project-eea70  
+  
+ Fri Mar 09 2018 12:24:48 GMT-0800 (PST)
+[debug] [2018-03-09T20:24:48.707Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-09T20:24:48.707Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905894445202/clients/_:getWebAppConfig  
+  
+ Fri Mar 09 2018 12:24:48 GMT-0800 (PST)
+[debug] [2018-03-09T20:24:49.200Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
