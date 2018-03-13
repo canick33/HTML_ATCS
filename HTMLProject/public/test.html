@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<body background="lightBackground.jpg">
+<style>
+
+
+
+button {
+    background-color: #EB330E;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.container {
+    padding: 24px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 32px;
+}
+
+
+
+</style>
+<p id = "login"> </p>
+<p id = "js_demo"> </p>
+
+<form action = "main.html">
+<div class="container">
+    <center>  <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder=" Username" id="uname" required> </center>
+    <br> </br>
+
+    <center><label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="psw" required> </center>
+    <br> </br>
+
+    <center><input id="loginButton" type="submit" value="LOGIN" onclick="getPass();" />
+    <p> <a href = accountSetup.html> Account Setup </a> </p> <center>
+
+</div>
+
+<script type = "text/jscript">
+
+function getPass(){
+  window.location.href = "test2.html";
+
+}
+function getUser(){
+  var username = document.getElementById("uname").value;
+  return username;
+}
+
+
+
+
+</script>
+</body>
+
+
+
+</html>
