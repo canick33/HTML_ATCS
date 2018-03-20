@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script>
+		</script>
 	</head>
 	<body>
 		<style>
@@ -41,7 +43,10 @@
 			background-color: #CFCFCF;
 			font-size: 17px;
 			border: none;
-			cursor:pointer:
+			}
+			
+			.search-form button:hover{
+			cursor:pointer;
 			}
 
 			.selected{
@@ -66,7 +71,7 @@
 			<a href="">PAGE3</a>
 			<a href="">PAGE4</a>
 			<form class=search-form>
-					<input type=text id=search-text placeholder="search">
+					<input type=text id=search-text oninput="updateSearchSuggestions(this.value)" placeholder="search">
 					<button onclick="">
 						GO
 					</button>
