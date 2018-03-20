@@ -22,12 +22,38 @@
 			.topnav a:hover{
 			background-color: #DFDFDF;
 			}
+			
+			.search-form{
+			float: right
+			}
+			
+			.search-form input[type=text]{
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			}
+			
+			.search-form button{
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background-color: #CFCFCF;
+			font-size: 17px;
+			border: none;
+			cursor:pointer:
+			}
 		</style>
 		<div class=topnav>
 			<a href="">PAGE1</a>
 			<a href="">PAGE2</a>
 			<a href="">PAGE3</a>
 			<a href="">PAGE4</a>
+			<form class=search-form>
+					<input type=text id=search-text placeholder="search">
+					<button onclick="">
+						GO
+					</button>
+			</form>
 		</div>
 		<main>
 		main
