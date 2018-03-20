@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script>
-			function updateSearchSuggestions(str) {
-				var temporaryData = ["abc", "def", "ghi", "jkl"];
-				var suggestions = []
-				for(data in temporaryData) {
-					if(data.indexOf(str) != -1) {
-						suggestions.push(data)
-					}
-				}
-			}
-		</script>
 	</head>
 	<body>
 		<style>
@@ -52,10 +41,7 @@
 			background-color: #CFCFCF;
 			font-size: 17px;
 			border: none;
-			}
-			
-			.search-form button:hover{
-			cursor:pointer;
+			cursor:pointer:
 			}
 
 			.selected{
@@ -75,12 +61,12 @@
 
 		</style>
 		<div class=topnav>
-			<a class = selected href="">PAGE1</a>
+			<a href="page1.html">PAGE1</a>
 			<a href="page2.html">PAGE2</a>
-			<a href="">PAGE3</a>
-			<a href="">PAGE4</a>
+			<a href="page3.html">PAGE3</a>
+			<a class = selected href="page4.html">PAGE4</a>
 			<form class=search-form>
-					<input type=text id=search-text oninput="updateSearchSuggestions(this.value)" placeholder="search">
+					<input type=text id=search-text placeholder="search">
 					<button onclick="">
 						GO
 					</button>
