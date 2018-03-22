@@ -2,13 +2,26 @@
 <html>
 	<head>
 		<script>
-			function updateSearchSuggestions(str) {
+			function updateSearchSuggestions(query) {
 				var temporaryData = ["abc", "def", "ghi", "jkl"];
-				var suggestions = []
+				var suggestions = [];
 				for(data in temporaryData) {
-					if(data.indexOf(str) != -1) {
-						suggestions.push(data)
+					if(data.indexOf(query) != -1) {
+						suggestions.push(data);
 					}
+				}
+			}
+			function displaySearchSuggestions(suggestions) {
+				var element = document.getElementById("searchSuggestions");
+				if (suggestions.length == 0) {
+					element.innerHTML = "";
+					element.style = "display: none";
+				} else {
+					element.innerHTML = "";
+					for(suggestion in suggestions) {
+						element.innerHTML += suggestion;
+					}
+					element.style = "display: block";
 				}
 			}
 		</script>
@@ -84,6 +97,8 @@
 					<button onclick="">
 						GO
 					</button>
+					<div id=searchSuggestions>
+					</div>
 			</form>
 		</div>
 		<main>
