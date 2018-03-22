@@ -6,10 +6,11 @@
 				var temporaryData = ["abc", "def", "ghi", "jkl"];
 				var suggestions = [];
 				for(data in temporaryData) {
-					if(data.indexOf(query) != -1) {
-						suggestions.push(data);
+					if(temporaryData[data].indexOf(query) != -1) {
+						suggestions.push(temporaryData[data]);
 					}
 				}
+				displaySearchSuggestions(suggestions);
 			}
 			function displaySearchSuggestions(suggestions) {
 				var element = document.getElementById("searchSuggestions");
@@ -19,7 +20,7 @@
 				} else {
 					element.innerHTML = "";
 					for(suggestion in suggestions) {
-						element.innerHTML += suggestion;
+						element.innerHTML += "<a>" + suggestions[suggestion] + "</a>" + "<br>";
 					}
 					element.style = "display: block";
 				}
