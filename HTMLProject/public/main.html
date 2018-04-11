@@ -5,9 +5,11 @@
 			function updateSearchSuggestions(query) {
 				var temporaryData = ["abc", "def", "ghi", "jkl"];
 				var suggestions = [];
-				for(data in temporaryData) {
-					if(temporaryData[data].indexOf(query) != -1) {
-						suggestions.push(temporaryData[data]);
+				if(query.length > 0) {
+					for(data in temporaryData) {
+						if(temporaryData[data].indexOf(query) != -1) {
+							suggestions.push(temporaryData[data]);
+						}
 					}
 				}
 				displaySearchSuggestions(suggestions);
@@ -88,12 +90,13 @@
 			}
 			
 			.suggestions-div{
+			display: none;
 			float: right;
 			background-color: #DFDFDF;
 			padding: 5px;
 			position: absolute;
-			top: 60px;
-			right: 65px;
+			top: 44px;
+			right: 187px;
 			}
 
 		</style>
