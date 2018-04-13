@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script id=products type=text/javascript src="products.js"></script>
 		<script>
 			function updateSearchSuggestions(query) {
 				var temporaryData = ["abc", "def", "ghi", "jkl"];
+				alert("a");
+				var products = JSON.parse(productData);
 				var suggestions = [];
 				if(query.length > 0) {
 					for(data in temporaryData) {
