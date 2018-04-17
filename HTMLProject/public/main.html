@@ -4,14 +4,19 @@
 		<script id=products type=text/javascript src="products.js"></script>
 		<script>
 			function updateSearchSuggestions(query) {
-				var temporaryData = ["abc", "def", "ghi", "jkl"];
-				alert("a");
 				var products = JSON.parse(productData);
+				//alert(products["categories"]["SSDs"]["Samsung 850 EVO 250GB 2.5-Inch SATA III Internal SSD"]);
 				var suggestions = [];
 				if(query.length > 0) {
-					for(data in temporaryData) {
-						if(temporaryData[data].indexOf(query) != -1) {
-							suggestions.push(temporaryData[data]);
+					for(var categories in products) {
+						for(var category in categories) {
+							for(var product in category) {
+								alert(product);
+								if(product.indexOf(query) != -1) {
+									alert(product);
+									suggestions.push(product);
+								}
+							}
 						}
 					}
 				}
