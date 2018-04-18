@@ -10,7 +10,7 @@
 				if(query.length > 0) {
 					for(var category in categories) {
 						for(var product in categories[category]) {
-							if(product.indexOf(query) != -1) {
+							if(product.toLowerCase().indexOf(query.toLowerCase()) != -1) {
 								suggestions.push(product);
 							}
 						}
