@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script id=products type=text/javascript src="products.js"></script>
 		<script>
 			function updateSearchSuggestions(query) {
+<<<<<<< HEAD
 				var temporaryData = ["abc","apple","aardvark","bannana", "def", "ghi", "jkl","test"];
+=======
+				var categories = JSON.parse(productData)["categories"];
+				//alert(products["categories"]["SSDs"]["Samsung 850 EVO 250GB 2.5-Inch SATA III Internal SSD"]);
+>>>>>>> 8b6863f0878dc27cea27240e0ff85bbbeb89f898
 				var suggestions = [];
-				for(data in temporaryData) {
-					if(temporaryData[data].indexOf(query) != -1) {
-						suggestions.push(temporaryData[data]);
+				if(query.length > 0) {
+					for(var category in categories) {
+						for(var product in categories[category]) {
+							if(product.toLowerCase().indexOf(query.toLowerCase()) != -1) {
+								suggestions.push(product);
+							}
+						}
 					}
 				}
 				displaySearchSuggestions(suggestions);
@@ -62,7 +72,7 @@
 			.search-form button{
 			padding: 6px 10px;
 			margin-top: 8px;
-			margin-right: 16px;
+			margin-right: 8px;
 			background-color: #CFCFCF;
 			font-size: 17px;
 			border: none;
@@ -86,10 +96,21 @@
 			text-decoration: none;
 			font-size: 17px;
 			}
+			
+			.suggestions-div{
+			display: none;
+			float: right;
+			background-color: #DFDFDF;
+			padding: 5px;
+			position: absolute;
+			top: 44px;
+			right: 67px;
+			font-size: 12px;
+			}
 
 		</style>
 		<div class=topnav>
-			<a class = selected href="">PAGE1</a>
+			<a class=selected href="">PAGE1</a>
 			<a href="page2.html">PAGE2</a>
 			<a href="">PAGE3</a>
 			<a href="">PAGE4</a>
@@ -98,9 +119,9 @@
 					<button onclick="">
 						GO
 					</button>
-					<div id=searchSuggestions>
-					</div>
 			</form>
+		</div>
+		<div class=suggestions-div id=searchSuggestions>
 		</div>
 		<main>
 		main
