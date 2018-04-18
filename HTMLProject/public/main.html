@@ -3,7 +3,7 @@
 	<head>
 		<script>
 			function updateSearchSuggestions(query) {
-				var temporaryData = ["abc", "def", "ghi", "jkl"];
+				var temporaryData = ["abc","apple","aardvark","bannana", "def", "ghi", "jkl","test"];
 				var suggestions = [];
 				for(data in temporaryData) {
 					if(temporaryData[data].indexOf(query) != -1) {
@@ -67,7 +67,7 @@
 			font-size: 17px;
 			border: none;
 			}
-			
+
 			.search-form button:hover{
 			cursor:pointer;
 			}
