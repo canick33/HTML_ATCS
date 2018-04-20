@@ -4,7 +4,6 @@
 		<script id=products type=text/javascript src="products.js"></script>
 		<script>
 			function updateSearchSuggestions(query) {
-				var temporaryData = ["abc","apple","aardvark","bannana", "def", "ghi", "jkl","test"];
 				var categories = JSON.parse(productData)["categories"];
 				var suggestions = [];
 				if(query.length > 0) {
