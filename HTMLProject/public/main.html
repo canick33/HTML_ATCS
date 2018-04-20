@@ -30,9 +30,20 @@
 					element.style = "display: block";
 				}
 			}
+			function start() {
+				var categories = JSON.parse(productData)["categories"];
+				var element = document.getElementById("tabs");
+				element.innerHTML = "";
+				for(var category in categories) {
+					element.innerHTML += "<a href=\"#\" onclick=\"switchCategory(\\\"" + category + "\");\">" + category + "</a>";
+				}
+			}
+			function switchCategory(name) {
+				alert("GOOD");
+			}
 		</script>
 	</head>
-	<body>
+	<body onload="start()">
 		<style>
 			.topnav{
 			overflow: hidden;
@@ -106,10 +117,8 @@
 
 		</style>
 		<div class=topnav>
-			<a class=selected href="">Graphics Cards</a>
-			<a href="">SSDs</a>
-			<a href="">Processors</a>
-			<a href="">Motherboards</a>
+			<div class=tabs id=tabs>
+			</div>
 			<form class=search-form>
 					<input type=text id=search-text oninput="updateSearchSuggestions(this.value)" onfocus="updateSearchSuggestions(this.value)" placeholder="search">
 					<button onclick="">
