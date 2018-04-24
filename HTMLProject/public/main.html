@@ -36,11 +36,14 @@
 				var element = document.getElementById("tabs");
 				element.innerHTML = "";
 				for(var category in categories) {
-					element.innerHTML += "<a href=\"#\" onclick=\"switchCategory(\\\"" + category + "\");\">" + category + "</a>";
+					element.innerHTML += "<a href=\"#\" onclick=\"switchCategory(&quot;" + category + "&quot;);\">" + category + "</a>";
 				}
 			}
 			function switchCategory(name) {
-				alert("GOOD");
+				var categories = JSON.parse(productData)["categories"];
+				var products = categories[name];
+				var element = document.getElementById("main");
+				element.innerHTML = "";
 			}
 		</script>
 	</head>
@@ -111,7 +114,7 @@
 			background-color: #DFDFDF;
 			padding: 5px;
 			position: absolute;
-			top: 44px;
+			top: 115px;
 			right: 67px;
 			font-size: 12px;
 			}
@@ -129,8 +132,8 @@
 		</div>
 		<div class=suggestions-div id=searchSuggestions>
 		</div>
-		<main>
-		main
+		<main id=main>
+			Welcome!
 		</main>
 	</body>
 </html>
