@@ -44,6 +44,10 @@
 				var products = categories[name];
 				var element = document.getElementById("main");
 				element.innerHTML = "";
+				for(var product in products) {
+					var price = products[product];
+					element.innerHTML += "<a>" + "$" + price.toFixed(2) + " -- " + product + "</a>" + "<br>";
+				}
 			}
 		</script>
 	</head>
@@ -118,6 +122,11 @@
 			right: 67px;
 			font-size: 12px;
 			}
+			
+			.suggestions-div a:hover{
+			cursor: pointer;
+			background-color: #CFCFCF;
+			}
 
 		</style>
 		<div class=topnav>
@@ -125,7 +134,7 @@
 			</div>
 			<form class=search-form>
 					<input type=text id=search-text oninput="updateSearchSuggestions(this.value)" onfocus="updateSearchSuggestions(this.value)" placeholder="search">
-					<button onclick="">
+					<button onclick="alert(&quot;Search results page is not implemented...&quot;);">
 						GO
 					</button>
 			</form>
