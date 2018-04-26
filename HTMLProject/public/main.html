@@ -5,8 +5,10 @@
 		<script>
 			function updateSearchSuggestions(query) {
 				var temporaryData = ["abc","apple","aardvark","bannana", "def", "ghi", "jkl","test"];
+
 				var categories = JSON.parse(productData)["categories"];
 				//alert(products["categories"]["SSDs"]["Samsung 850 EVO 250GB 2.5-Inch SATA III Internal SSD"]);
+
 				var suggestions = [];
 				if(query.length > 0) {
 					for(var category in categories) {
@@ -93,7 +95,7 @@
 			text-decoration: none;
 			font-size: 17px;
 			}
-			
+
 			.suggestions-div{
 			display: none;
 			float: right;
