@@ -1,41 +1,32 @@
-[debug] [2018-03-22T18:04:32.674Z] ----------------------------------------------------------------------
-[debug] [2018-03-22T18:04:32.676Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-03-22T18:04:32.676Z] CLI Version:   3.17.4
-[debug] [2018-03-22T18:04:32.676Z] Platform:      darwin
-[debug] [2018-03-22T18:04:32.676Z] Node Version:  v8.9.4
-[debug] [2018-03-22T18:04:32.677Z] Time:          Thu Mar 22 2018 11:04:32 GMT-0700 (PDT)
-[debug] [2018-03-22T18:04:32.677Z] ----------------------------------------------------------------------
+[debug] [2018-04-26T15:31:52.199Z] ----------------------------------------------------------------------
+[debug] [2018-04-26T15:31:52.207Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-04-26T15:31:52.207Z] CLI Version:   3.17.4
+[debug] [2018-04-26T15:31:52.207Z] Platform:      darwin
+[debug] [2018-04-26T15:31:52.207Z] Node Version:  v8.9.4
+[debug] [2018-04-26T15:31:52.208Z] Time:          Thu Apr 26 2018 08:31:52 GMT-0700 (PDT)
+[debug] [2018-04-26T15:31:52.208Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-03-22T18:04:32.691Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-03-22T18:04:32.691Z] > authorizing via signed-in user
-[debug] [2018-03-22T18:04:32.693Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-03-22T18:04:32.693Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/JihM06xKM68ctS5F4lleQ1kU5HM0NmwhAS7FVT88M3U',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu Mar 22 2018 11:04:32 GMT-0700 (PDT)
-[debug] [2018-03-22T18:04:32.886Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-22T18:04:32.903Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/html-project-eea70  
+[debug] [2018-04-26T15:31:52.217Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-26T15:31:52.217Z] > authorizing via signed-in user
+[debug] [2018-04-26T15:31:52.219Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/html-project-eea70  
   
- Thu Mar 22 2018 11:04:32 GMT-0700 (PDT)
-[debug] [2018-03-22T18:04:33.353Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-22T18:04:33.354Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/html-project-eea70/tokens  
+ Thu Apr 26 2018 08:31:52 GMT-0700 (PDT)
+[debug] [2018-04-26T15:31:52.676Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T15:31:52.677Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/html-project-eea70/tokens  
   
- Thu Mar 22 2018 11:04:33 GMT-0700 (PDT)
-[debug] [2018-03-22T18:04:33.830Z] <<< HTTP RESPONSE 200
+ Thu Apr 26 2018 08:31:52 GMT-0700 (PDT)
+[debug] [2018-04-26T15:31:53.157Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/hollyholden/Documents/GitHub/HTML_ATCS/HTMLProject'...
 [info] 
-[debug] [2018-03-22T18:04:33.834Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/html-project-eea70  
+[debug] [2018-04-26T15:31:53.160Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/html-project-eea70  
   
- Thu Mar 22 2018 11:04:33 GMT-0700 (PDT)
-[debug] [2018-03-22T18:04:34.208Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-22T18:04:34.209Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905894445202/clients/_:getWebAppConfig  
+ Thu Apr 26 2018 08:31:53 GMT-0700 (PDT)
+[debug] [2018-04-26T15:31:53.566Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T15:31:53.567Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905894445202/clients/_:getWebAppConfig  
   
- Thu Mar 22 2018 11:04:34 GMT-0700 (PDT)
-[debug] [2018-03-22T18:04:34.626Z] <<< HTTP RESPONSE 200
+ Thu Apr 26 2018 08:31:53 GMT-0700 (PDT)
+[debug] [2018-04-26T15:31:53.905Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 
