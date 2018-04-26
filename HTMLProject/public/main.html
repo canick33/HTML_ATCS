@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+	<h1>Online Computer Parts Store</h1>
 	<head>
 		<script id=products type=text/javascript src="products.js"></script>
 		<script>
 			function updateSearchSuggestions(query) {
+<<<<<<< HEAD
 				var temporaryData = ["abc","apple","aardvark","bannana", "def", "ghi", "jkl","test"];
 
 				var categories = JSON.parse(productData)["categories"];
 				//alert(products["categories"]["SSDs"]["Samsung 850 EVO 250GB 2.5-Inch SATA III Internal SSD"]);
 
+=======
+				var categories = JSON.parse(productData)["categories"];
+>>>>>>> 61c8b5f07ee43812506d2d1a42f6abe618af46d8
 				var suggestions = [];
 				if(query.length > 0) {
 					for(var category in categories) {
@@ -34,9 +39,27 @@
 					element.style = "display: block";
 				}
 			}
+			function start() {
+				var categories = JSON.parse(productData)["categories"];
+				var element = document.getElementById("tabs");
+				element.innerHTML = "";
+				for(var category in categories) {
+					element.innerHTML += "<a href=\"#\" onclick=\"switchCategory(&quot;" + category + "&quot;);\">" + category + "</a>";
+				}
+			}
+			function switchCategory(name) {
+				var categories = JSON.parse(productData)["categories"];
+				var products = categories[name];
+				var element = document.getElementById("main");
+				element.innerHTML = "";
+				for(var product in products) {
+					var price = products[product];
+					element.innerHTML += "<a>" + "$" + price.toFixed(2) + " -- " + product + "</a>" + "<br>";
+				}
+			}
 		</script>
 	</head>
-	<body>
+	<body onload="start()">
 		<style>
 			.topnav{
 			overflow: hidden;
@@ -79,6 +102,7 @@
 
 			.search-form button:hover{
 			cursor:pointer;
+			background-color: #DFDFDF;
 			}
 
 			.selected{
@@ -102,28 +126,31 @@
 			background-color: #DFDFDF;
 			padding: 5px;
 			position: absolute;
-			top: 44px;
+			top: 115px;
 			right: 67px;
 			font-size: 12px;
+			}
+			
+			.suggestions-div a:hover{
+			cursor: pointer;
+			background-color: #CFCFCF;
 			}
 
 		</style>
 		<div class=topnav>
-			<a class=selected href="">PAGE1</a>
-			<a href="page2.html">PAGE2</a>
-			<a href="">PAGE3</a>
-			<a href="">PAGE4</a>
+			<div class=tabs id=tabs>
+			</div>
 			<form class=search-form>
 					<input type=text id=search-text oninput="updateSearchSuggestions(this.value)" onfocus="updateSearchSuggestions(this.value)" placeholder="search">
-					<button onclick="">
+					<button onclick="alert(&quot;Search results page is not implemented...&quot;);">
 						GO
 					</button>
 			</form>
 		</div>
 		<div class=suggestions-div id=searchSuggestions>
 		</div>
-		<main>
-		main
+		<main id=main>
+			Welcome!
 		</main>
 	</body>
 </html>
